@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-light theme</title>
+    <style>
+      .theme-icon{
+        height:30px;
+        width:30px;
+        cursor:pointer;
+        padding:5px;
+        border-radius: 5px;
+        background-color: #ffff;
+      } 
+      .active{
+      
+        border:1px solid  black;
+      }
+      .theme-dark{
+        background-color: black;
+        color:#ffff;
+      }
+      .theme-light{
+        background-color:rgb(243, 243, 109);
+        color:black;
+      }
+
+    </style>
+</head>
+<body id="body">
+    <div>
+        <img src="dark-mode (2).png" class="theme-icon" id="img-dark" onclick=" darkMode()"/>
+        <img src="light-mode (1).png" class="theme-icon" id="img-light" onclick=" lightMode()"/>
+        <h1>Dark\Light Mode theme changer</h1>
+        <p>
+            today we learn the topic DOM Manipulatiom in Javascript.<br>
+            and we try to make different applications using concept,<br>
+            like change theme of screen eg light or Dark.
+        </p>
+    </div>
+    <script>
+        function darkMode(){
+            const imgdark=document.getElementById('img-dark');
+            imgdark.classList.add('active');
+
+
+            const imglight=document.getElementById('img-light');
+            imglight.classList.remove('active');
+
+            const bodyelement=document.getElementById('body');
+            bodyelement.classList.add('theme-dark');
+            const bodylelement=document.getElementById('body');
+            bodylelement.classList.remove('theme-light');
+
+        }
+        function lightMode(){
+            const imglight=document.getElementById('img-light');
+            imglight.classList.add('active');
+
+
+            const imgdark=document.getElementById('img-dark');
+            imgdark.classList.remove('active');
+
+            const bodylelement=document.getElementById('body');
+            bodylelement.classList.add('theme-light');
+            const bodyelement=document.getElementById('body');
+            bodyelement.classList.remove('theme-dark');
+            
+        }
+    </script>
+   
+
+    
+</body>
+</html>
